@@ -8,7 +8,7 @@ The Job Matching System is a web application built with Flask, a Python web fram
 ## Project Structure
 
 The project structure is organized as follows:
-
+```bash
 job_matching_system/
 |-- app/
 |   |-- __init__.py
@@ -32,7 +32,7 @@ job_matching_system/
 |-- requirements.txt
 |-- README.md
 |-- .gitignore
-
+```
 
 
 ## Installation
@@ -68,32 +68,32 @@ Visit http://127.0.0.1:5000/ in your web browser to access the application.
 ## API Endpoints:
 # Job Seekers:
 
-GET /job_seekers: Get all job seekers.
-GET /job_seekers/<job_seeker_id>: Get a specific job seeker.
-POST /job_seekers: Create a new job seeker.
-PUT /job_seekers/<job_seeker_id>: Update a job seeker.
-DELETE /job_seekers/<job_seeker_id>: Delete a job seeker.
+GET /job_seekers: Get all job seekers. <br>
+GET /job_seekers/<job_seeker_id>: Get a specific job seeker. <br>
+POST /job_seekers: Create a new job seeker. <br>
+PUT /job_seekers/<job_seeker_id>: Update a job seeker. <br>
+DELETE /job_seekers/<job_seeker_id>: Delete a job seeker. <br>
 
 # Skill Sets:
 
-GET /skill_sets: Get all skill sets.
-GET /skill_sets/<skill_set_id>: Get a specific skill set.
-POST /skill_sets: Create a new skill set.
-PUT /skill_sets/<skill_set_id>: Update a skill set.
-DELETE /skill_sets/<skill_set_id>: Delete a skill set.
+GET /skill_sets: Get all skill sets. <br>
+GET /skill_sets/<skill_set_id>: Get a specific skill set. <br>
+POST /skill_sets: Create a new skill set. <br>
+PUT /skill_sets/<skill_set_id>: Update a skill set. <br>
+DELETE /skill_sets/<skill_set_id>: Delete a skill set. <br>
 
 # Job Postings:
 
-GET /job_postings: Get all job postings.
-GET /job_postings/<job_posting_id>: Get a specific job posting.
-POST /job_postings: Create a new job posting.
-PUT /job_postings/<job_posting_id>: Update a job posting.
-DELETE /job_postings/<job_posting_id>: Delete a job posting.
+GET /job_postings: Get all job postings. <br>
+GET /job_postings/<job_posting_id>: Get a specific job posting. <br>
+POST /job_postings: Create a new job posting. <br>
+PUT /job_postings/<job_posting_id>: Update a job posting. <br>
+DELETE /job_postings/<job_posting_id>: Delete a job posting. <br>
 
 # Applications:
 
-GET /applications: Get all applications.
-GET /applications/<application_id>: Get a specific application.
-POST /applications: Create a new application.
-PUT /applications/<application_id>: Update an application.
-DELETE /applications/<application_id>: Delete an application.
+GET /applications: Get all applications. <br>
+GET /applications/<application_id>: Get a specific application. <br>
+POST /applications: Create a new application. <br>
+PUT /applications/<application_id>: Update an application. <br>
+DELETE /applications/<application_id>: Delete an application. <br>
