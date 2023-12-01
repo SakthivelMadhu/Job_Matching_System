@@ -64,27 +64,27 @@ intelligent_job_matching_system/
 ## ERDiagram 
 
 ```bash
-+-----------------+        +---------------------+       +-----------------+
-|   JobSeeker     |        |   JobPosting        |       |   Application   |
-+-----------------+        +---------------------+       +-----------------+
-| id: ObjectId    |        | id: ObjectId        |       | id: ObjectId    |
-| name: String    |        | job_title: String    |       | status: String  |
-| status: Boolean |        | status: String       |       | job_posting: Ref|
-| skills: String  |        | start_date: DateTime |       +-----------------+
-| experience: Enum|        | end_date: DateTime   |
-| bio: String     |        | hiring_manager: Ref  |
-| availability:   |        | skill_sets: [Ref]    |
-|   DateTime      |        +---------------------+
-+-----------------+
++----------------------+        +----------------------+       
+|   JobSeeker          |        |   JobPosting         |       
++----------------------+        +----------------------+       
+| id: ObjectId         |        | id: ObjectId         |       
+| name: String         |        | job_title: String    |       
+| status: Boolean      |        | status: String       |       
+| skills: String       |        | start_date: DateTime |       
+| experience: Enum     |        | end_date: DateTime   |
+| bio: String          |        | hiring_manager: Ref  |
+| availability:DateTime|        | skill_sets: [Ref]    |
++----------------------+        +----------------------+
 
-+-----------------+
-|   SkillSet      |
-+-----------------+
-| id: ObjectId    |
-| name: String    |
-| job_postings:   |
-|   [Ref]         |
-+-----------------+
+
++----------------------+        +-----------------+
+|   SkillSet           |        |  Application    |
++----------------------+        +-----------------+ 
+| id: ObjectId         |        | id: ObjectId    |
+| name: String         |        | status: String  |
+| job_postings:[Ref]   |        | job_posting: Ref|
++----------------------+        +-----------------+
+
 
 ```
 
