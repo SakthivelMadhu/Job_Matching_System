@@ -7,7 +7,7 @@ from flask_mongoengine.json import JSONEncoder
 class JobPostingTest(unittest.TestCase):
     def setUp(self):
         app.config['TESTING'] = True
-        app.config['MONGODB_SETTINGS'] = {'db': 'test_db', 'host': 'localhost', 'port': 27017}
+        app.config['MONGODB_SETTINGS'] = {'db': 'job_matching_system_db', 'host': 'localhost', 'port': 27017}
         self.app = app.test_client()
         db.init_app(app)
 
