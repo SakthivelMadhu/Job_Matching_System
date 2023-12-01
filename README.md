@@ -1,99 +1,118 @@
+# Intelligent Job Matching System
 
-# Job Matching System
+This project is a backend system for an intelligent job matching application. It is built using Flask and MongoDB , to facilitate the matching of job seekers with job postings. This project includes features such as managing job seekers, job postings, applications, and skill sets.
 
-## Description
-
-The Job Matching System is a web application built with Flask, a Python web framework, to facilitate the matching of job seekers with job postings. This project includes features such as managing job seekers, job postings, applications, and skill sets.
 
 ## Project Structure
 
 The project structure is organized as follows:
 ```bash
-job_matching_system/
-|-- app/
-|   |-- __init__.py
-|   |-- models/
-|   |   |-- __init__.py
-|   |   |-- job_seeker.py
-|   |   |-- job_posting.py
-|   |   |-- application.py
-|   |   |-- skill_set.py
-|   |-- routes/
-|   |   |-- __init__.py
-|   |   |-- job_seeker_routes.py
-|   |   |-- job_posting_routes.py
-|   |   |-- application_routes.py
-|   |   |-- skill_set_routes.py
-|   |-- config.py
-|   |-- extensions.py
-|   |-- app.py
-|-- migrations/
-|-- tests/
-|-- requirements.txt
-|-- README.md
-|-- .gitignore
+intelligent_job_matching_system/
+│
+├── app/
+│   ├── __init__.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── job_seeker.py
+│   │   ├── job_posting.py
+│   │   ├── application.py
+│   │   └── skill_set.py
+│   ├── routes/
+│   │   ├── __init__.py
+│   │   ├── job_seeker_routes.py
+│   │   ├── job_posting_routes.py
+│   │   ├── application_routes.py
+│   │   └── skill_set_routes.py
+│   └── main.py
+│
+├── config/
+│   ├── __init__.py
+│   ├── config.py
+│   └── database.py
+│
+├── tests/
+│   ├── __init__.py
+│   ├── test_job_seeker.py
+│   ├── test_job_posting.py
+│   ├── test_application.py
+│   └── test_skill_set.py
+│
+├── requirements.txt
+├── README.md
+├── .gitignore
+└── run.py
+
 ```
 
+## Project Structure
 
-## Installation
+- `app/`: Contains the main application code.
+  - `__init__.py`: Initializes the Flask application.
+  - `models/`: Defines data models.
+  - `routes/`: Defines API routes for CRUD operations.
+  - `main.py`: Entry point for running the Flask application.
+- `config/`: Configuration files.
+  - `__init__.py`: Empty file.
+  - `config.py`: General configuration settings.
+  - `database.py`: MongoDB configuration settings.
+- `tests/`: Unit tests for different components of the application.
+- `requirements.txt`: Lists project dependencies.
+- `README.md`: Project documentation.
+- `.gitignore`: Specifies files and directories to be ignored by version control.
+- `run.py`: Script to run the Flask application.
 
-1. Clone the repository:
+## Setup and Run
+
+1. clone github: `https://github.com/SakthivelMadhu/Job_Matching_System.git`
+2. Create and activate a virtual environment: `python -m venv venv`, `.\venv\Scripts\activate`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Run the application: `python run.py`
+
+## API Endpoints
+
+- Job Seekers: `/api/job_seekers`
+- Job Postings: `/api/job_postings`
+- Applications: `/api/applications`
+- Skill Sets: `/api/skill_sets`
+
+## Testing
+
+To run tests, use the following command:
 
 ```bash
-git clone https://github.com/SakthivelMadhu/Job_Matching_System.git
-cd job_matching_system
-```
-2. Create and activate a virtual environment:
-
-```bash
-python -m venv venv
-.\venv\Scripts\activate  # For Windows
+python -m unittest discover -s tests -p 'test_*.py'
 ```
 
-3. Install dependencies:
+## API Endpoints
 
-```bash
-pip install -r requirements.txt
-```
+### Job Seekers
 
-4. Run the application:
+- **GET /job_seekers:** Get all job seekers.
+- **GET /job_seekers/<job_seeker_id>:** Get a specific job seeker.
+- **POST /job_seekers:** Create a new job seeker.
+- **PUT /job_seekers/<job_seeker_id>:** Update a job seeker.
+- **DELETE /job_seekers/<job_seeker_id>:** Delete a job seeker.
 
-```bash
-flask run or python app.py
-```
+### Skill Sets
 
-## Usage
-Visit http://127.0.0.1:5000/ in your web browser to access the application.
+- **GET /skill_sets:** Get all skill sets.
+- **GET /skill_sets/<skill_set_id>:** Get a specific skill set.
+- **POST /skill_sets:** Create a new skill set.
+- **PUT /skill_sets/<skill_set_id>:** Update a skill set.
+- **DELETE /skill_sets/<skill_set_id>:** Delete a skill set.
 
-## API Endpoints:
-# Job Seekers:
+### Job Postings
 
-GET /job_seekers: Get all job seekers. <br>
-GET /job_seekers/<job_seeker_id>: Get a specific job seeker. <br>
-POST /job_seekers: Create a new job seeker. <br>
-PUT /job_seekers/<job_seeker_id>: Update a job seeker. <br>
-DELETE /job_seekers/<job_seeker_id>: Delete a job seeker. <br>
+- **GET /job_postings:** Get all job postings.
+- **GET /job_postings/<job_posting_id>:** Get a specific job posting.
+- **POST /job_postings:** Create a new job posting.
+- **PUT /job_postings/<job_posting_id>:** Update a job posting.
+- **DELETE /job_postings/<job_posting_id>:** Delete a job posting.
 
-# Skill Sets:
+### Applications
 
-GET /skill_sets: Get all skill sets. <br>
-GET /skill_sets/<skill_set_id>: Get a specific skill set. <br>
-POST /skill_sets: Create a new skill set. <br>
-PUT /skill_sets/<skill_set_id>: Update a skill set. <br>
-DELETE /skill_sets/<skill_set_id>: Delete a skill set. <br>
-
-# Job Postings:
-
-GET /job_postings: Get all job postings. <br>
-GET /job_postings/<job_posting_id>: Get a specific job posting. <br>
-POST /job_postings: Create a new job posting. <br>
-PUT /job_postings/<job_posting_id>: Update a job posting. <br>
-DELETE /job_postings/<job_posting_id>: Delete a job posting. <br>
-
-# Applications:
-
-GET /applications: Get all applications. <br>
-GET /applications/<application_id>: Get a specific application. <br>
-POST /applications: Create a new application. <br>
-PUT /applications/<application_id>: Update an application. <br>
-DELETE /applications/<application_id>: Delete an application. <br>
+- **GET /applications:** Get all applications.
+- **GET /applications/<application_id>:** Get a specific application.
+- **POST /applications:** Create a new application.
+- **PUT /applications/<application_id>:** Update an application.
+- **DELETE /applications/<application_id>:** Delete an application.

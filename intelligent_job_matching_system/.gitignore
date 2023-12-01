@@ -1,0 +1,13 @@
+
+### `.gitignore`
+
+```plaintext
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite
+*.log
+*.pyc
+__pycache__/
