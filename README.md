@@ -61,6 +61,34 @@ intelligent_job_matching_system/
 - `.gitignore`: Specifies files and directories to be ignored by version control.
 - `run.py`: Script to run the Flask application.
 
+## ERDiagram 
+
+```bash
++-----------------+        +---------------------+       +-----------------+
+|   JobSeeker     |        |   JobPosting        |       |   Application   |
++-----------------+        +---------------------+       +-----------------+
+| id: ObjectId    |        | id: ObjectId        |       | id: ObjectId    |
+| name: String    |        | job_title: String    |       | status: String  |
+| status: Boolean |        | status: String       |       | job_posting: Ref|
+| skills: String  |        | start_date: DateTime |       +-----------------+
+| experience: Enum|        | end_date: DateTime   |
+| bio: String     |        | hiring_manager: Ref  |
+| availability:   |        | skill_sets: [Ref]    |
+|   DateTime      |        +---------------------+
++-----------------+
+
++-----------------+
+|   SkillSet      |
++-----------------+
+| id: ObjectId    |
+| name: String    |
+| job_postings:   |
+|   [Ref]         |
++-----------------+
+
+```
+
+
 ## Setup and Run
 
 1. clone github: `https://github.com/SakthivelMadhu/Job_Matching_System.git`
