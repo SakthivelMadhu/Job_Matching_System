@@ -83,6 +83,11 @@ To run tests, use the following command:
 python -m unittest discover -s tests -p 'test_*.py'
 ```
 
+## MongoDB Connections 
+MongoDB is used as the database backend in this system. The connection string can be found in the `config/database.py` file.
+
+
+
 ## API Endpoints
 
 ### Job Seekers
